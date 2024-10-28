@@ -62,10 +62,7 @@ body {
       resize: none;
     }
 
-    .error-name,
-    .error-email,
-    .error-phone,
-    .error-message {
+    .error {
       color: $color-error;
       font-size: $size-error;
       margin-top: 5px;
