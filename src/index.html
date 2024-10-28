@@ -9,26 +9,26 @@
     <div id="app">
       <div class="form">
         <h2>Форма</h2>
-        <form>
+        <form class="form-wrapper" novalidate>
           <div class="form-part">
             <label for="name">Имя</label>
             <input id="name" type="text" />
-            <p class="error-name"></p>
+            <p class="error"></p>
           </div>
           <div class="form-part">
             <label for="email">Email</label>
             <input id="email" type="email" />
-            <p class="error-email"></p>
+            <p class="error error-email"></p>
           </div>
           <div class="form-part">
             <label for="phone">Телефон</label>
             <input id="phone" type="text" />
-            <p class="error-phone"></p>
+            <p class="error"></p>
           </div>
           <div class="form-part">
             <label for="message">Сообщение</label>
             <textarea id="message" rows="10"></textarea>
-            <p class="error-message"></p>
+            <p class="error"></p>
           </div>
           <button type="submit">Отправить</button>
         </form>
