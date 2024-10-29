@@ -1,6 +1,7 @@
 import "../../src/style.scss";
 import { digitsMask } from "./mask";
 import { clientValidation } from "./clientValidation";
+import { openWindow, closeWindow } from "./modal";
 
 const form = document.querySelector(".form-wrapper");
 const phoneInput = document.getElementById("phone");
@@ -12,4 +13,5 @@ const inputs = [nameInput, emailInput, phoneInput, messageInput];
 
 digitsMask(phoneInput);
 clientValidation(form, inputs, errors);
-console.log("hello worlsd");
+openWindow();
+closeWindow();
