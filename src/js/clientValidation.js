@@ -38,7 +38,7 @@ export const clientValidation = (form, inputs, errors) => {
       inputs.forEach((input) => {
         data[input.id] = input.value;
       });
-      console.log(data);
+
       const response = await serverValidation(data);
 
       const message = messageAnswer(response.message);
@@ -49,6 +49,10 @@ export const clientValidation = (form, inputs, errors) => {
       } else {
         message.style.color = "red";
       }
+      errors.forEach((oneError) => {
+        oneError.textContent = "";
+      });
+
       return response;
     }
   });
