@@ -29,6 +29,7 @@ body {
 }
 
 #app {
+  position: relative;
   width: 100%;
   max-width: 400px;
   background-color: $color-background-app;
@@ -79,6 +80,33 @@ body {
       cursor: pointer;
       background-color: $color-background-body;
       transition: 1s;
+    }
+  }
+
+  .answer-registration {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: $size-error;
+    border: 1px solid $color-background-body;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+
+    @media (max-width: 1300px) {
+      left: 75%;
+      transform: translateX(0%);
+    }
+
+    @media (max-width: 800px) {
+      left: 60%;
+      top: 10px;
+    }
+
+    @media (max-width: 500px) {
+      left: 0;
     }
   }
 }

@@ -1,4 +1,4 @@
-import "../sass/main.scss";
+import "../../src/style.scss";
 import { digitsMask } from "./mask";
 import { clientValidation } from "./clientValidation";
 
