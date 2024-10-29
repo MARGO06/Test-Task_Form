@@ -20,6 +20,7 @@ html {
 }
 
 body {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,6 +108,67 @@ body {
 
     @media (max-width: 500px) {
       left: 0;
+    }
+  }
+
+  button[type="button"] {
+    margin-top: 10px;
+  }
+
+  .modal.hidden,
+  .background-modal.hidden {
+    display: none;
+  }
+
+  .background-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(64, 63, 61, 0.8);
+  }
+
+  .modal {
+    display: flex;
+    padding: 16px;
+    width: 60%;
+    height: 70vh;
+    background-color: $color-background-body;
+    border-radius: 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+
+    @media (max-width: 800px) {
+      width: 90%;
+      height: 80vh;
+    }
+    .modal-info {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+      font-size: $size-text;
+      line-height: 3rem;
+
+      .modal-text {
+        margin: 0 auto;
+        width: 70%;
+        text-align: center;
+      }
+
+      button[type="button"] {
+        margin: 0 auto;
+        max-width: 300px;
+        padding: 1rem;
+
+        @media (max-width: 800px) {
+          max-width: 100px;
+        }
+      }
     }
   }
 }
